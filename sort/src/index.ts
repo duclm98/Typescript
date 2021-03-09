@@ -1,7 +1,7 @@
-console.log('Hi there!');
+import { Sorter } from './Sorter';
+import { NumbersCollection } from './NumbersCollection';
 
-const logSomething = () => {
-  console.log('Something');
-}
-
-logSomething();
+const numbersCollection = new NumbersCollection([10, 5, 8, -3]);
+const sorter = new Sorter(numbersCollection);
+sorter.sort();
+console.log(numbersCollection.data);
